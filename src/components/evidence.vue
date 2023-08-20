@@ -4,7 +4,7 @@
       <div>
         <input type="checkbox" v-model="evidences" :value="Evidence.DOTS" class="btn-check" id="dots"
                autocomplete="off">
-        <label class="btn" for="dots">D.O.T.S Projector</label>
+        <label class="btn crossedOut" for="dots">D.O.T.S Projector</label>
       </div>
       <div>
         <input type="checkbox" v-model="evidences" :value="Evidence.EMF" class="btn-check" id="emf" autocomplete="off">
@@ -67,6 +67,11 @@
   display: grid;
   grid-template-columns: repeat(5, 0.5fr);
 }
+
+.crossedOut {
+  text-decoration: line-through !important;
+  color: darkgray;
+}
 </style>
 
 <script setup lang="ts">
@@ -106,6 +111,5 @@ let possibleGhosts = computed(() => {
 });
 
 store.possibleGhosts = possibleGhosts;
-
 
 </script>
