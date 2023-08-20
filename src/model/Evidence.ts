@@ -1,7 +1,7 @@
 export enum  Evidence {
     DOTS,
     EMF,
-    FINGERPRINTS,
+    ULTRAVIOLET,
     FREEZING,
     ORB,
     WRITING,

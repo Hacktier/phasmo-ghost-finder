@@ -20,7 +20,7 @@ export default new Set([
     ),
     new Ghost(
         "Phantom",
-        new Set<Evidence>([Evidence.BOX, Evidence.FINGERPRINTS, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.BOX, Evidence.ULTRAVIOLET, Evidence.DOTS]),
         "Wird unsichtbar nach einem Foto. Ist bei der Jagd länger unsichtbar. Folgt gerne Spielern.",
         "Ansehen schwächt die Sanity",
         "Fotos lassen es verschwinden",
@@ -28,7 +28,7 @@ export default new Set([
     ),
     new Ghost(
         "Poltergeist",
-        new Set<Evidence>([Evidence.FINGERPRINTS, Evidence.BOX, Evidence.WRITING]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.BOX, Evidence.WRITING]),
         "Kann mehrere Objekte gleichzeiitg werfen => - 2% Sanity pro Objekt 100% Chance (andere 50%) alle 0.5 sekunden ein Objekt während der Jagd zu werfen. Kann Objekte weiter und härter werfen.",
         "Kann mehrere Gegenstände mit großer Kraft werfen",
         "In einem leeren Raum ist er machtlos",
@@ -36,7 +36,7 @@ export default new Set([
     ),
     new Ghost(
         "Banshee",
-        new Set<Evidence>([Evidence.FINGERPRINTS, Evidence.ORB, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.DOTS]),
         "Nimmt einen Spieler als Ziel. Folgt ihrem Ziel. Ignoriert Spieler, die nicht ihr Ziel sind Erhöhte Chance für Sing-Geisterevents",
         "Banshee schwächt ihr Ziel",
         "Bansheeschrei im Parabolmikrofon",
@@ -44,7 +44,7 @@ export default new Set([
     ),
     new Ghost(
         "Jinn",
-        new Set<Evidence>([Evidence.EMF, Evidence.FINGERPRINTS, Evidence.FREEZING]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.FREEZING]),
         "WENN Breaker an ist:\n" + "Schneller als normal. wird aber im 3m Radius um den Spieler langsamer\n" + "Kann einen Spieler um 25% Sanity schwächen => EMF am Breaker",
         "Schnell wenn Opfer weit weg ist",
         "Ohne Strom verliert er seine Fähigkeiten",
@@ -76,7 +76,7 @@ export default new Set([
     ),
     new Ghost(
         "Demon",
-        new Set<Evidence>([Evidence.FINGERPRINTS, Evidence.WRITING, Evidence.FREEZING]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.FREEZING]),
         "Cooldown zwischen Jagden ist 20 statt 25 Sekunden\n" + "Außerhalb der Jagd smudgen schützt für 60 sekunden vor einer Jagd (statt 90)\n" + "Kruzifix hat einen höheren Radius 3m -> 5m",
         "Jagd öfter",
         "Fürchtet das Kruzifix",
@@ -108,7 +108,7 @@ export default new Set([
     ),
     new Ghost(
         "Hantu",
-        new Set<Evidence>([Evidence.FINGERPRINTS, Evidence.ORB, Evidence.FREEZING]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.FREEZING]),
         "\"Erhöht nicht die Geschwindigkeit wenn er einen Spieler sieht.\n" + "Geschwindigkeit während der Jagd: -1.4m/s bei 15°C -> 2.7m/s  ab 0°C\n" + "Der Geist hat während der Jagd Geisteratem vor SEINEM Mund\n" + "Hantu kann den Breaker nicht einschalten\n" + "Im Albtraum-Schwierigkeitsgrad hat er immer Gefriertemperaturen.",
         "Ist schneller wenn es kalt ist.",
         "Ist langsamer wenn es warm ist.",
@@ -116,7 +116,7 @@ export default new Set([
     ),
     new Ghost(
         "Goryo",
-        new Set<Evidence>([Evidence.EMF, Evidence.FINGERPRINTS, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.DOTS]),
         "Zeigt D.O.T.S. nur über die Kamera wenn niemand im Raum ist.\n" + "Verlässt seinen Raum nur selten.\n" + "Kann den Lieblingsraum nicht wechseln\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er immer D.O.T.S",
         "Zeigt sich nur vor der Kamera, wenn niemand da ist.",
         "Sind selten weit von ihrem Todesort entfernt.",
@@ -124,7 +124,7 @@ export default new Set([
     ),
     new Ghost(
         "Myling",
-        new Set<Evidence>([Evidence.EMF, Evidence.FINGERPRINTS, Evidence.WRITING]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.WRITING]),
         "Schritte und Geister-Geräusche sind während der Jagd auf 12m zu hören (sonst 20m)\n" + "Myling reagiert häufiger auf das Parabolmikrofon",
         "Leise bei der Jagd",
         "Gibt häufiger paranormale Geräusche ab",
@@ -156,7 +156,7 @@ export default new Set([
     ),
     new Ghost(
         "Obake",
-        new Set<Evidence>([Evidence.EMF, Evidence.FINGERPRINTS, Evidence.ORB]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.ORB]),
         "Kann Fingerabdrücken mit 6 Fingern hinterlassen 25% Chance KEINE Fingerabdrücke zu hinterlassen\n" + "Kann die Zeit in der die Fingerabdrücke sichtbar sind reduzieren.\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er immer Fingerabdrücke\n" + "Verändert mindestens 1x pro Jagd sein Aussehen für einen Blink",
         "Hinterlässt weniger Hinweise bei Interaktionen",
         "Manchmal verwandelt sich der Geist",
@@ -164,7 +164,7 @@ export default new Set([
     ),
     new Ghost(
         "Mimik",
-        new Set<Evidence>([Evidence.BOX, Evidence.FINGERPRINTS, Evidence.FREEZING, Evidence.ORB]),
+        new Set<Evidence>([Evidence.BOX, Evidence.ULTRAVIOLET, Evidence.FREEZING, Evidence.ORB]),
         "Zeigt zusätzlich zu seinen Beweisen einen Geisterorb.\n" + "Kann die Eigenarten eines beliebigen Geistes annehmen\n" + "Wechselt seinen Form alle 2.5 Minuten, aber nie während einer Jagd.\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er zusätzlich den Orb und hat damit 3 Beweise.",
         "Unterschiedlich",
         "Geisterorb",
