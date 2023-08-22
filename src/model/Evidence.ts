@@ -5,5 +5,6 @@ export enum  Evidence {
     FREEZING,
     ORB,
     WRITING,
-    BOX
+    BOX,
+    SPEED
 }

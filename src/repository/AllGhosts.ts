@@ -4,15 +4,15 @@ import {Evidence} from "~/src/model/Evidence";
 export default new Set([
     new Ghost(
         "Spirit",
-        new Set<Evidence>([Evidence.EMF, Evidence.BOX, Evidence.WRITING]),
-        "Ein Smudge l&ouml;st aus, dass der Geist 180 Sekunden nicht mehr jagen kann.",
+        new Set<Evidence>([Evidence.EMF, Evidence.BOX, Evidence.WRITING, Evidence.SPEED]),
+        "Ein Smudge l\&ouml;st aus, dass der Geist 180 Sekunden nicht mehr jagen kann.",
         "Keine",
         "Das Verwenden von R&auml;ucherst&auml;bchen h&auml;lt ihn f&uumlr l&auml;ngere Zeit davon ab anzugreifen.",
         "Bei niedrieger Sanity smudgen und sehen ob der Geist später jagt als üblich."
     ),
     new Ghost(
-        "Wrath",
-        new Set<Evidence>([Evidence.EMF, Evidence.BOX, Evidence.DOTS]),
+        "Wraith",
+        new Set<Evidence>([Evidence.EMF, Evidence.BOX, Evidence.DOTS, Evidence.SPEED]),
         "Laufen niemals in Salz. Teleportieren sich zu einem Spieler => EMF2 => laufen dann zurück in ihren Raum",
         "Berührt fast nie den Boden => Keine Fußabdrücke",
         "Angst vor Salz",
@@ -20,7 +20,7 @@ export default new Set([
     ),
     new Ghost(
         "Phantom",
-        new Set<Evidence>([Evidence.BOX, Evidence.ULTRAVIOLET, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.BOX, Evidence.ULTRAVIOLET, Evidence.DOTS, Evidence.SPEED]),
         "Wird unsichtbar nach einem Foto. Ist bei der Jagd länger unsichtbar. Folgt gerne Spielern.",
         "Ansehen schwächt die Sanity",
         "Fotos lassen es verschwinden",
@@ -28,7 +28,7 @@ export default new Set([
     ),
     new Ghost(
         "Poltergeist",
-        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.BOX, Evidence.WRITING]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.BOX, Evidence.WRITING, Evidence.SPEED]),
         "Kann mehrere Objekte gleichzeiitg werfen => - 2% Sanity pro Objekt 100% Chance (andere 50%) alle 0.5 sekunden ein Objekt während der Jagd zu werfen. Kann Objekte weiter und härter werfen.",
         "Kann mehrere Gegenstände mit großer Kraft werfen",
         "In einem leeren Raum ist er machtlos",
@@ -36,7 +36,7 @@ export default new Set([
     ),
     new Ghost(
         "Banshee",
-        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.DOTS, Evidence.SPEED]),
         "Nimmt einen Spieler als Ziel. Folgt ihrem Ziel. Ignoriert Spieler, die nicht ihr Ziel sind Erhöhte Chance für Sing-Geisterevents",
         "Banshee schwächt ihr Ziel",
         "Bansheeschrei im Parabolmikrofon",
@@ -52,7 +52,7 @@ export default new Set([
     ),
     new Ghost(
         "Mare",
-        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.WRITING]),
+        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.WRITING, Evidence.SPEED]),
         "\"Schaltet gern Lichter aus.\n" + "Höhere Chance für das Lichter-Zerstören-Event\n" + "Wandert mehr wenn Licht an ist.\n" + "Chance das Licht direkt auszuschalten wenn es eingeschaltet wird",
         "Greift eher im Dunkeln an",
         "Greift seltener im Licht an",
@@ -68,7 +68,7 @@ export default new Set([
     ),
     new Ghost(
         "Shade",
-        new Set<Evidence>([Evidence.EMF, Evidence.WRITING, Evidence.FREEZING]),
+        new Set<Evidence>([Evidence.EMF, Evidence.WRITING, Evidence.FREEZING, Evidence.SPEED]),
         "Ist der inaktivste Geist.\n" + "Zeigt sich häufiger in Schattenform als andere Geister.\n" + "Schmeißt nur Gegenstände wenn allein im Raum.\n" + "Geister-Event-Chance steigt mit sinkender Sanity",
         "Schüchtern => Weniger Events, Aktivität",
         "Jagd nur wenn alleine in seinem  Raum",
@@ -76,7 +76,7 @@ export default new Set([
     ),
     new Ghost(
         "Demon",
-        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.FREEZING]),
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.FREEZING, Evidence.SPEED]),
         "Cooldown zwischen Jagden ist 20 statt 25 Sekunden\n" + "Außerhalb der Jagd smudgen schützt für 60 sekunden vor einer Jagd (statt 90)\n" + "Kruzifix hat einen höheren Radius 3m -> 5m",
         "Jagd öfter",
         "Fürchtet das Kruzifix",
@@ -84,7 +84,7 @@ export default new Set([
     ),
     new Ghost(
         "Yurei",
-        new Set<Evidence>([Evidence.ORB, Evidence.FREEZING, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.ORB, Evidence.FREEZING, Evidence.DOTS, Evidence.SPEED]),
         "Kann eine Tür in seinem Raum komplett schließen und dabei dem Spieler 15% Sanity rauben. Aber Achtung: Andere Geister können das auch nur ohne den Verlust der Sanity.\n" + "Wir der Geist gesmudged wird er eine Weile in seinem Raum eingesperrt.",
         "Stärkerer Einfluss auf Sanity",
         "Stellt Bewegung nach Räuchern ein",
@@ -92,7 +92,7 @@ export default new Set([
     ),
     new Ghost(
         "Oni",
-        new Set<Evidence>([Evidence.EMF, Evidence.FREEZING, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.EMF, Evidence.FREEZING, Evidence.DOTS, Evidence.SPEED]),
         "Kann kein HEY-Event (Mist Event)\n" + "Zeigt sich nur in voller Pracht.\n" + "NEU: Er kann sich auch als Schatten oder Geist zeigen!\n" + "Onis verdoppeln den Sanity-Verlust wenn man von einem Event betroffen ist\n" + "Flackert seltener während der Jagd.",
         "Aktiver wenn in Gesellschaft",
         "Verschwinden seltener bei der Jagd",
@@ -100,7 +100,7 @@ export default new Set([
     ),
     new Ghost(
         "Yokai",
-        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.DOTS, Evidence.SPEED]),
         "Kann weder Stimmen noch Ausrüstung auf 2.5 Meter entfernung bemerken.\n" + "Wird aktiver, wenn man in der Nähe redet.\n" + "Die Musik-Box bricht erst wenn sie wesentlich näher beim Geist ist.",
         "Sprechen verärgert den Geist =>Höhere Chance auf Jagd",
         "Bei der Jagd hört der Yokai nur Stimmen in seiner Nähe",
@@ -124,7 +124,7 @@ export default new Set([
     ),
     new Ghost(
         "Myling",
-        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.WRITING]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.SPEED]),
         "Schritte und Geister-Geräusche sind während der Jagd auf 12m zu hören (sonst 20m)\n" + "Myling reagiert häufiger auf das Parabolmikrofon",
         "Leise bei der Jagd",
         "Gibt häufiger paranormale Geräusche ab",
@@ -132,7 +132,7 @@ export default new Set([
     ),
     new Ghost(
         "Onryo",
-        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.FREEZING]),
+        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.FREEZING, Evidence.SPEED]),
         "Kann nicht innerhalb von 4m in einem Flammenradius jagen.\n" + "Wenn er 3 Kerzen ausbläst und keine weitere Flamme in der nähe findet, dann wird er eine jagd unabhängig von der Sanity starten.",
         "Das Auslöschen einer Flamme kann ihn angreifen lassen.",
         "Wenn er bedroht wird jagt er weniger gern.",
@@ -156,7 +156,7 @@ export default new Set([
     ),
     new Ghost(
         "Obake",
-        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.ORB]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.SPEED]),
         "Kann Fingerabdrücken mit 6 Fingern hinterlassen 25% Chance KEINE Fingerabdrücke zu hinterlassen\n" + "Kann die Zeit in der die Fingerabdrücke sichtbar sind reduzieren.\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er immer Fingerabdrücke\n" + "Verändert mindestens 1x pro Jagd sein Aussehen für einen Blink",
         "Hinterlässt weniger Hinweise bei Interaktionen",
         "Manchmal verwandelt sich der Geist",
