@@ -9,9 +9,13 @@ export default defineNuxtConfig({
             title: 'Phasmo Ghost Finder',
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
+            script: [
+                { src: 'bootstrap.bundle.js'}
+            ]
         }
     },
     modules: [
         '@pinia/nuxt',
     ],
+
 })

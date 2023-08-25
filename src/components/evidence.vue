@@ -15,7 +15,7 @@
       <div class="card-header fw-bold fs-4"> Incorrect Ghosts</div>
       <div class="wrongGhostGrid m-2">
         <div v-for="wrongGhost in wrongGhosts">
-          <button @click="store.wrongGhosts.delete(wrongGhost)" class="btn btn-secondary">
+          <button @click="store.wrongGhosts.delete(wrongGhost)" class="btn btn-secondary ghostBtn">
             {{ wrongGhost.name }}
           </button>
         </div>
@@ -41,10 +41,16 @@
 }
 
 .wrongGhostGrid {
-  display: grid;
-  grid-template-columns: repeat(8, 0.5fr);
-    grid-gap: 10px;
-    grid-row-gap: 25px;
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.ghostBtn {
+  flex: 1;
+  max-width: 100%;
 }
 
 .crossedOut {

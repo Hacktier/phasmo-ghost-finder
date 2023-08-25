@@ -1,13 +1,6 @@
 <template>
   <div class="ghostGrid" id="ghostGrid">
 
-    <!--    <ghostCard :key="ghost.name" v-for="ghost in ghosts"-->
-    <!--               :ghostName="ghost.name"-->
-    <!--               :ability="ghost.ability"-->
-    <!--               :strength="ghost.strength"-->
-    <!--               :weakness="ghost.weakness"-->
-    <!--               :test="ghost.test"-->
-    <!--    />-->
     <ghostCard :key="ghost.name" v-for="ghost in ghosts"
                :ghost=ghost
     />
