@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     css: [
-        'bootstrap/dist/css/bootstrap.css'
+        'bootstrap/dist/css/bootstrap.css',
     ],
     app: {
         head: {
@@ -10,12 +10,12 @@ export default defineNuxtConfig({
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
             script: [
-                { src: 'bootstrap.bundle.js'}
+                'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js'
             ]
         }
     },
     modules: [
         '@pinia/nuxt',
     ],
-
+    ssr: false,
 })

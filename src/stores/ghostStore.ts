@@ -1,18 +1,10 @@
-import { defineStore } from 'pinia'
-import Ghosts from "~/src/components/ghosts.vue";
+import { defineStore } from 'pinia';
+import Ghosts from "~/src/model/Ghost";
 
 export const useGhostStore = defineStore('possibleGhosts', () => {
-    let possibleGhosts = new Set<typeof Ghosts>;
-    let wrongGhosts = new Set<typeof Ghosts>
+    let possibleGhosts = ref(new Set<Ghosts>);
+    let wrongGhosts = ref(new Set<Ghosts>);
 
-    function setPossibleGhosts(ghosts: Set<typeof Ghosts>) {
-        possibleGhosts = ghosts;
-    }
-
-    function setWrongGhosts(ghosts: Set<typeof Ghosts>) {
-        wrongGhosts = ghosts;
-    }
-
-    return {possibleGhosts, setPossibleGhosts, wrongGhosts, setWrongGhosts};
+    return {possibleGhosts, wrongGhosts};
 });
 

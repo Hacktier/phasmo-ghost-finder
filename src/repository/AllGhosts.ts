@@ -46,7 +46,7 @@ export default new Set([
         "Jinn",
         new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.FREEZING]),
         "50%",
-        ["Sicherunskasten an => Jinn Ability => Spieler im selben Raum / 3m Umkreis verlieren 25 Sanity", "Am Sicherungskasten wird ein EMF Level 2/5 erzeugt"],
+        ["Sicherunskasten an => Jinn Fähigkeit => Spieler im selben Raum / 3m Umkreis verlieren 25 Sanity", "Am Sicherungskasten wird ein EMF Level 2/5 erzeugt"],
         ["Kann den Sicherungskasten nicht ausschalten.", "Hunt => Sicherungskasten an + Entfernung mehr als 3m zum Spieler + Line of sight => Speed = 2,5m/s"],
         ["Sicherunskasten einschalten => EMF auf den Sicherunskasten legen "]
     ),
@@ -97,112 +97,100 @@ export default new Set([
         ["Kann kein Airball Event machen", "Events haben den doppelten Sanity Verlust zur Folge (20%).", "Währen einer Hunt ist ein Oni länger sichtbar."],
         ["Darauf achten ob HEY-Events kommen und ob der Geist sich mit Schatten oder Geist-Model zeigt oder nicht.\n" + "Ansonsten während der Jagd beobachten ob er seltener flackert als die anderen Geister."]
     ),
-    // new Ghost(
-    //     "Yokai",
-    //     new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.DOTS, Evidence.SPEED]),
-    //     "50% Sanity / 80% (Reden)",
-    //     "Kann weder Stimmen noch Ausrüstung auf 2.5 Meter entfernung bemerken.\n" + "Wird aktiver, wenn man in der Nähe redet.\n" + "Die Musik-Box bricht erst wenn sie wesentlich näher beim Geist ist.",
-    //     "Sprechen verärgert den Geist =>Höhere Chance auf Jagd",
-    //     "Bei der Jagd hört der Yokai nur Stimmen in seiner Nähe",
-    //     "Außerhalb der 2.5 Meter Radius des Geistes, während der Jagd stehen und nach ihm Rufen. Ignoriert er euch, habt ihr einen Yokai."
-    // ),
-    // new Ghost(
-    //     "Hantu",
-    //     new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.FREEZING]),
-    //     "50%",
-    //     "\"Erhöht nicht die Geschwindigkeit wenn er einen Spieler sieht.\n" + "Geschwindigkeit während der Jagd: -1.4m/s bei 15°C -> 2.7m/s  ab 0°C\n" + "Der Geist hat während der Jagd Geisteratem vor SEINEM Mund\n" + "Hantu kann den Breaker nicht einschalten\n" + "Im Albtraum-Schwierigkeitsgrad hat er immer Gefriertemperaturen.",
-    //     "Ist schneller wenn es kalt ist.",
-    //     "Ist langsamer wenn es warm ist.",
-    //     "Während der Jagd beobachten, ob er Geisteratem vor seinem Mund hat. Ansonsten auf die Schrittgeschwindkeit lauschen. Wird der Geist in der Nähe des Geisterraums schneller, dann habt ihr einen Hantu. Er wird schneller, weil es im Geisterraum kälter ist als woanders.\n" + "Zum weiteren Test könnt ihr auch den Breaker aus- oder anschalten und sehen ob er schneller bzw. langsamer wird.\n" + "Der Breaker hat Auswirkungen auf die Umgebungstemperatur."
-    // ),
-    // new Ghost(
-    //     "Goryo",
-    //     new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.DOTS]),
-    //     "50%",
-    //     "Zeigt D.O.T.S. nur über die Kamera wenn niemand im Raum ist.\n" + "Verlässt seinen Raum nur selten.\n" + "Kann den Lieblingsraum nicht wechseln\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er immer D.O.T.S",
-    //     "Zeigt sich nur vor der Kamera, wenn niemand da ist.",
-    //     "Sind selten weit von ihrem Todesort entfernt.",
-    //     "Wenn der Geist D.O.T.S zeigt wenn man im Raum ist, dann ist es KEIN Goryo. Zeigt er es allerdings nur vor der Kamera, wenn niemand im Raum ist, dann ist das ein eindeutiger Beweis.\n" + "Außerdem wechselt er nie seinen Raum."
-    // ),
-    // new Ghost(
-    //     "Myling",
-    //     new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.SPEED]),
-    //     "50%",
-    //     "Schritte und Geister-Geräusche sind während der Jagd auf 12m zu hören (sonst 20m)\n" + "Myling reagiert häufiger auf das Parabolmikrofon",
-    //     "Leise bei der Jagd",
-    //     "Gibt häufiger paranormale Geräusche ab",
-    //     "Hört auf die Geräusche während der Jagd. Ist die Myling während der Jagd  nicht mehr zu hören? Kann sie weiter weg sein als 20m? Wenn Nein, habt ihr wohl eine Myling.\n" + "Ihr könnt euch auch vor das Versteck eine Taschenlampe legen und diese angeschaltet lassen. Wenn sich der Geist dieser auf 10 Meter nähert, beginnt sie zu flackern. Hört ihr den Geist immernoch leise? Wenn ja habt ihr eine Myling."
-    // ),
-    // new Ghost(
-    //     "Onryo",
-    //     new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.FREEZING, Evidence.SPEED]),
-    //     "60% / 100% (Fähigkeit)",
-    //     "Kann nicht innerhalb von 4m in einem Flammenradius jagen.\n" + "Wenn er 3 Kerzen ausbläst und keine weitere Flamme in der nähe findet, dann wird er eine jagd unabhängig von der Sanity starten.",
-    //     "Das Auslöschen einer Flamme kann ihn angreifen lassen.",
-    //     "Wenn er bedroht wird jagt er weniger gern.",
-    //     "Stellt eine Kerze auf und legt ein Kruzifix daneben. \n" + "Zündet die Kerze an. Ein Onryo wird die Kerze schnell ausblasen. Zündet sie noch 2x wieder an. Nachdem der Geist das dritte Mal die Kerze ausgeblasen hat sucht er nach einer weiteren Kerze. Findet er keine, beginnt die Jagd unabhänggig  von eurer Sanity. Das Kruzifix wird euch dabei beschützen und angeknabbert oder zerstört werden."
-    // ),
-    // new Ghost(
-    //     "The_Twins",
-    //     new Set<Evidence>([Evidence.EMF, Evidence.BOX, Evidence.FREEZING]),
-    //     "50%",
-    //     "Kann mit mehreren Objekten in verschiedenen Reichweiten interagieren.\n" + "Stelle dir einen Kreis um den Geist vor, dies ist sein Interaktionsrahmen und einen größeren Kreis um diesen, welcher der sekundäre Geist darstellen soll. \n" + "Nur der Hauptgeist kann Salz und Bewegungssensoren auslösen.\n" + "Kann von jeder Position innerhalb des gesamten Kreises jagen.\n" + "Jagt der \"\"Hauptgeist\"\" dann ist er 110% schnell.\n" + "Jagt der \"\"Sekundärgeist\"\" dann ist er 90% schnell.\n" + "Technisch ist nur ein Geist da. Er immitiert zwei!",
-    //     "Jeder der Zwillinge kann für sich angreifen.",
-    //     "Sie interagieren oft gleichzeitig (Twinteraction)",
-    //     "Achtet auf die Geschwindigkeit während der Jagd.\n" + "Variiert diese ein wenig von der normalen Geschwindigkeit?\n" + "Hört ihr/Bemerkt ihr dann noch Twinteractions? Dann habt ihr die Zwillinge."
-    // ),
-    // new Ghost(
-    //     "Raiju",
-    //     new Set<Evidence>([Evidence.EMF, Evidence.ORB, Evidence.DOTS]),
-    //     "50% / 65% (mit Geräten)",
-    //     "Kann früher jagen, wenn Geräte in der Nähe sind.\n" + "Kann sich nur von eingeschalteten Geräten ernähren.\n" + "Innerhalb von 6m/8m/10m (je nach Mapgröße) zieht er Energie von elektrischen Spielergeräten und wird schneller.\n" + "Innerhalb von 15m (sonst 10m) weisen Geräte Fehlfunktionen auf.",
-    //     "Wird schneller mit elektrischen Geräten in der Nähe",
-    //     "Stört elektronische Geräte während der Jagd.",
-    //     "Erscheint der Geist sehr schnell? Entfernt alle technischen oder schaltet sie aus. Ist der Geist nun langsamer?"
-    // ),
-    // new Ghost(
-    //     "Obake",
-    //     new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.SPEED]),
-    //     "50%",
-    //     "Kann Fingerabdrücken mit 6 Fingern hinterlassen 25% Chance KEINE Fingerabdrücke zu hinterlassen\n" + "Kann die Zeit in der die Fingerabdrücke sichtbar sind reduzieren.\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er immer Fingerabdrücke\n" + "Verändert mindestens 1x pro Jagd sein Aussehen für einen Blink",
-    //     "Hinterlässt weniger Hinweise bei Interaktionen",
-    //     "Manchmal verwandelt sich der Geist",
-    //     "Der Obake hinterlässt möglicherweise einen weiteren \n" + "Fingerabdruck mit 6 Fingern. Außerdem solltet ihr euch merken wo er überall seine Fingerabdrücke hinterlassen hat.\n" + "Er hinterlässt nicht immer welche.\n" + "Zusätzlich wechselt er für einen Flash mindestens 1x die Jagd das Aussehen.",
-    // ),
-    // new Ghost(
-    //     "The_Mimic",
-    //     new Set<Evidence>([Evidence.BOX, Evidence.ULTRAVIOLET, Evidence.FREEZING, Evidence.ORB]),
-    //     "unbekannt",
-    //     "Zeigt zusätzlich zu seinen Beweisen einen Geisterorb.\n" + "Kann die Eigenarten eines beliebigen Geistes annehmen\n" + "Wechselt seinen Form alle 2.5 Minuten, aber nie während einer Jagd.\n" + "Im Albtraum-Schwierigkeitsgrad zeigt er zusätzlich den Orb und hat damit 3 Beweise.",
-    //     "Unterschiedlich",
-    //     "Geisterorb",
-    //     "Beobachtet das Verhalten des Geistes.\n" + "Verhält er sich während der Jagd anders als das letzte Mal?\n" + "Ist ein Orb da?"
-    // ),
-    // new Ghost(
-    //     "Moroi",
-    //     new Set<Evidence>([Evidence.BOX, Evidence.WRITING, Evidence.FREEZING]),
-    //     "50% Sanity",
-    //     "Verflucht Spieler die eine Antwort aus dem Geisterbuch oder dem \n" + "Parabolmikrofon gehört haben. Dadurch verliert man passiv Sanity.\n" + "Licht und Kerzen können den Abfall nicht stoppen.\n" + "Sanity Pillen lösen den Fluch.\n" + "Smudgen blendet den Geist für 12 Sekunden\n" + "Wird schneller je niedriger die Sanity der Spieler ist (ab 45%). \n" + "Vorher ist er langsamer als üblich.\n" + "Im Abltraum-Schwierigkeitsgrad gibt es immer den Geisterbox-Beweis.",
-    //     "Je schwächer die Opfer, desto stärker der Geist",
-    //     "Stärkerer Geruchssinn was sie schwächt",
-    //     "Ihr benötigt Antwort aus der Geisterbox, damit ihr vom Fluch des Moroi getroffen werdet.\n" + "Prüft eure Sanity. \n" + "Geht mit einer Kerze ins Gebäude und verweilt dort etwas.\n" + "Sinkt die Sanity trotz Kerze und ausbleiben von Geister-Events, so habt ihr einen Moroi!",
-    // ),
-    // new Ghost(
-    //     "Deogen",
-    //     new Set<Evidence>([Evidence.BOX, Evidence.WRITING, Evidence.DOTS]),
-    //     "40%",
-    //     "Während der Jagd super schnell solange er weit weg ist und findet den Weg zu einem Spieler. Wird langsam, wenn er sich in der Nähe des Spielers befindet.\n" + "Kann sein Ziel während der Jagd wechseln.\n" + "Hat einen einzigartigen Geisterbox Soundeffekt (Schweres Atmen)\n" + "Im Albtraum-Schwierigkeitsgrad gibt es immer den Geisterbox-Beweis.",
-    //     "Deogen spüren die Lebenden. Verstecken nicht möglich.",
-    //     "Bewegen sich langsam in der Nähe des Ziels",
-    //     "Der Deogen wird mit gewaltiger Geschwindigkeit auf euch zugerannt kommen. Wenn ihr hört, wie er sich euch nähert und kurz vor euch furchtbar langsam wird, dann habt ihr einen Deogen.",
-    // ),
-    // new Ghost(
-    //     "Thaye",
-    //     new Set<Evidence>([Evidence.ORB, Evidence.WRITING, Evidence.DOTS]),
-    //     "75% (jung) / 15% (alt)",
-    //     "Der Geist altert.\n" + "Er reduziert seine Geschwindigkeit, je öfter er altert. \n" + "2.7m/s => 1m/s\n" + "Chance auf Geisterevents, Jagden und die allgmeine Aktivität sinken.\n" + "Wird nicht schneller, wenn er den Spieler während der Jagd sieht.\n" + "Erhöhte Chance auf D.O.T.S und Geisterbuch\n" + "Das Ouija-Board wird immer ein anderes Alter anzeigen, je nachdem wie alt der Geist ist.",
-    //     "Defensiv und Agil sobald man ankommt.",
-    //     "Wird mit der Zeit schwächer und ruhiger.",
-    //     "Beobachtet ob der Geist immer ruhiger wird.\n" + "Noch auffälliger ist es, wenn der Geist mit der Zeit immer langsamer beim jagen wird. Falls das Ouija Board vorhanden ist könnt ihr auch zwischendurch nach dem Alter fragen, wenn ihr das Gefühl habt, dass der Geist langsamer geworden ist.\n" + "Er müsste dann älter sein als vorher."
-    // )
+    new Ghost(
+        "Yokai",
+        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.DOTS, Evidence.SPEED]),
+        "50% / 80% (Reden)",
+        ["Kann temporär ab 80% jagen wenn in seiner nähe geredet wird."],
+        ["Bei der Jagd hört der Yokai nur Stimmen / Spielergeräte in seiner Nähe", "Die Musikbox het eine geringe Funktionsreichweite "],
+        ["Während einer Hunt in mindestens 2,5m Entfernung sprechen / Spielergeräte benutzen => Keine Geister Reaktion "]
+    ),
+    new Ghost(
+        "Hantu",
+        new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.FREEZING]),
+        "50%",
+        ["Kann den Sicherungskasten nicht einschalten, schaltet ihn aber 2x so häufig aus wie andere Geister."],
+        ["Tempo abhängig von der Temperatur: >15°C = 1,4m/s / <0°C = 2,7m/s", "Keine Sicht Beschleunigung."],
+        ["Änderung der Geschwindigkeit in verschiedenen Räumen", "Sicherungskasten aus => Geist hat weiße Atemwolken vor dem Mund"]
+    ),
+    new Ghost(
+        "Goryo",
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.DOTS]),
+        "50%",
+        ["Eine D.O.T.S Interaktion kann nur durch eine Videkamera gesehen werden wenn sich kein Spieler im Raum befindet.", "Wenn es nur 1 oder 2 Beweise gibt => immer D.O.T.S"],
+        ["Ein Goryo kann niemals selbständig den Raum wechseln."],
+        ["Wenn eine D.O.T.S Interaktion nur über die Kamera sichtbar ist und nicht im Raum selbst ohne ist es ein Goryo."]
+        ),
+    new Ghost(
+        "Myling",
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.SPEED]),
+        "50%",
+        ["Verursacht häufig Sounds die über das Parabol Mikrofon zu hören sind."],
+        ["Während einer Hunt ist ein Myling nur auf 12m hörbar.", "Ist leiser als andere Geister"],
+        ["Hunt => Geist ist in der selben Etage => Taschenlampe im Versteck fallenlassen => Flackert nur wenn der Geist hörbar ist"]
+    ),
+    new Ghost(
+        "Onryo",
+        new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.FREEZING, Evidence.SPEED]),
+        "60% / 100% (Fähigkeit)",
+        ["Kann in einem 4m Radius um eine Flamme nicht hunten, die Kerze wird ausgeblasen und die Hunt scheitert."],
+        ["Je mehr tote Spieler desto größer ist die Flammen auspust Frequenz.", "Unter 60% Sanity werden mehr Kerzen ausgepustet (scheiternde Hunts)", "Flammen sorgen nicht dafür das der Onryo seinen Raum wechselt!"],
+        ["Kruzifix und angezündete Kerze platzieren => Kruzifix wird zuerst ausgelöst => Kein Onryo", "3 Flammen Methode => nach jeder 3. ausgepusteten Flamme wird eine Hunt iniziert (Kruzifix zum Schutz)."]
+    ),
+    new Ghost(
+        "The_Twins",
+        new Set<Evidence>([Evidence.EMF, Evidence.BOX, Evidence.FREEZING]),
+        "50%",
+        ["Eine Interaktion wird in einem Umkreis bis zu 3m ausgelöst. Durch das einsetzten seiner Fähigkeit kann er eine weitere Interaktion, zeitgleich in einem Umkreis bis zu 16m ausführen."],
+        ["50% Chance Hunt an der Geist Position zu beginnen (1,5m/s), 50% Chance Hunt an der Position der letzten entfernten Interaktion (1,9m/s) zu beginnen.", "Kruzifix Check erfolgt immer an der Geist Position."],
+        ["Auf wechselnde Geschwindigkeit zwischen den hunts achten", "An entfernten Inteaktion können die Beweise Freezing und Spirit Box nicht erkannt werden da der Geist nicht dort ist"]
+    ),
+    new Ghost(
+        "Raiju",
+        new Set<Evidence>([Evidence.EMF, Evidence.ORB, Evidence.DOTS]),
+        "50% / 65% (mit Geräten)",
+        ["Hunt ab 65% Sanity wenn aktive elektronisch Geräte in der Nähe des Geistes sind.", "Hunt / Event => Raiju inteferiert mit Elektronik bis zu 15m entfernt (alle anderen Geister 10m)"],
+        ["Hunt => Geschwindigkeit auf 2,5m/s wenn Raiju in der Nähe aktiver elektronisch Geräte (Map Größen: S=6m, M=8m, L=10m)"],
+        ["auf hohe Geschwindigkeit bei einer Hunt achten => Sanity Pillen(>60%) => akive Elektronik in den Geistraum legen"]
+    ),
+    new Ghost(
+        "Obake",
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.SPEED]),
+        "50%",
+        ["Nur 75% Chance bei Interaktion mit Oberflächen Ultraviolet zu hinterlassen", "Kann die Zeit die UV Beweise verbleiben halbieren => Fähigkeit ist stackbar"],
+        ["Kann zu einer 1/6 Chance einzigartige Fingerabdrücke hinterlassen: 6 Finger, 2 Lichschalter, 5 Finger Tastaturen und Zellentüren", "Wenn es nur 1 oder 2 Beweise gibt => immer UV", "mind. 1x pro Hunt wechselt er sein Aussehen zusätzlich kann er zu einer 1/16 Chance häufiger wechseln"],
+        ["Berührte Oberflächen immer mit UV Licht überprüfen => erst kein UV Beweis => später UV Beweis => Obake"]
+    ),
+    new Ghost(
+        "The_Mimic",
+        new Set<Evidence>([Evidence.BOX, Evidence.ULTRAVIOLET, Evidence.FREEZING, Evidence.ORB, Evidence.SPEED]),
+        "unbekannt",
+        ["Kann jeden anderen Geist imitieren (Events / Interaktionen Häufigkeit + Präferenzen, Hunt Sanity Schwellenwert, Geschwindigkeit, Fähigkeit)"],
+        ["Kann auch Obake Handabdruck kopieren.", "Wenn es nur 1 oder 2 Beweise gibt => keine garantierten Hinweise andere Geister", "Wechselt den imitierten Geist alle 30s - 120s.", "Kann nicht während der Hunt wechseln.",  "Zeigt in jedem Schwierigkeitsgrad einen Ghost Orb."],
+        ["Auf Verhaltenswechsel achten.", "Auf Aktionen achten, die nicht zu gefundenen Beweisen passen, z.B. Twin Interaktion an 2 entfernten Türen + UV => Twins haben kein UV"]
+    ),
+    new Ghost(
+        "Moroi",
+        new Set<Evidence>([Evidence.BOX, Evidence.WRITING, Evidence.FREEZING]),
+        "50% ",
+        ["Verflucht Spieler die ihn über die Spirit Box oder das Parabolmikrofon gehört haben, der Sanity Verlust wird verdoppelt und beleuchtete Areale verhindern nicht mehr den Verlust von Sanity.", "Kann durch Sanity Pillen geheilt werden."],
+        ["Geschiwindigkeit hängt von der Durchschitts Sanity ab (>=45% Sanity = 1,5m/s / <5% = 2,25m/s)", "Max. Geschwindigkeit: 3,71m/s (Sicht Beschleunigung).", "Weihrauch lässt den Moroi 50% länger erblinden."],
+        ["Spirit Box Antwort => auf stark erhöhten Sanity Verlust achten", "<45% Sanity => Hunt & Geist in Hörweite => Sanity Pillen => Live auf Geschwindigkeitsänderung achten"]
+    ),
+    new Ghost(
+        "Deogen",
+        new Set<Evidence>([Evidence.BOX, Evidence.WRITING, Evidence.DOTS]),
+        "40%",
+        ["Weiß immer wo sich die Spieler befinden (verstecken ist sinnlos). Während einer Hunt bewegt er sich mit hoher Geschwindigkeit zum nächsten Spieler um kurz vor ihm abzubremsen (>6m = 3m/s / <2,5m = 0,4m/s)."],
+        ["Flackert weniger als andere Geister während der Hunt.", "Spirit Box Antwort => Deogen im Umkreis von 1m => 33% Change für ein stierartiges Atmen","Wenn es nur 1 oder 2 Beweise gibt => immer Spirit Box"],
+        ["mit Weihrauch verstecken => Geist findet dich in mehreren Verstecken", "Geist Loopen und auf Geschwindigkeitswechsel achten."]
+    ),
+    new Ghost(
+        "Thaye",
+        new Set<Evidence>([Evidence.ORB, Evidence.WRITING, Evidence.DOTS]),
+        "75% (jung) / 15% (alt)",
+        ["Versucht alle 1-2 min zu altern => wenn kein Spieler im Geist Raum scheitert es und wird nach 30s erneut versucht"],
+        ["Alter beeinflusst:", "Hunt Schwellenwert (-6% pro Jahr)", "Hunt Geschwindigkeit (0J = 2,75m/s / 10J = 1m/s)", "Interaktions Häufigkeit (0J = 200% / 10J = 50%)" ],
+        ["Ouija Brett => mehrfach nach dem Alter fragen", "Geist ist zum Anfang sehr aktiv und wird inaktiver", "Geschwindigkeit des Geistes ist bei späteren Hunts merklich langsamer"]
+    )
 ]);

@@ -14,7 +14,7 @@
     <div class="card span">
       <div class="card-header fw-bold fs-4"> Incorrect Ghosts</div>
       <div class="wrongGhostGrid m-2">
-        <div v-for="wrongGhost in wrongGhosts">
+        <div v-for="wrongGhost in store.wrongGhosts">
           <button @click="store.wrongGhosts.delete(wrongGhost)" class="btn btn-secondary ghostBtn">
             {{ wrongGhost.name }}
           </button>
@@ -22,8 +22,7 @@
       </div>
     </div>
   </div>
-
-  <hr class="mb-5"/>
+  <div class="mb-5">&nbsp;</div>
 </template>
 
 <style scoped>
@@ -31,7 +30,7 @@
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
   grid-gap: 10px;
-  grid-row-gap: 25px;
+  grid-row-gap: 15px;
 }
 
 .headerGrid {
@@ -75,7 +74,6 @@ const store = useGhostStore();
 
 const evidencesWithStates = ref<EvidenceState[]>([]);
 
-let wrongGhosts = ref(store.wrongGhosts)
 let possibleGhosts = computed(() => {
   let ghosts = new Set(AllGhosts);
 
@@ -84,7 +82,7 @@ let possibleGhosts = computed(() => {
       const state = evidencesWithStates.value[Evidence[evidence]];
 
       if (ghost.name === "Mimik"
-      && (evidence == Evidence.SPEED || evidence == "SPEED")) {
+          && (evidence == Evidence.SPEED || evidence == "SPEED")) {
         continue;
       }
 
@@ -99,7 +97,7 @@ let possibleGhosts = computed(() => {
       }
     }
 
-    if (wrongGhosts.value.has(ghost)) {
+    if (store.wrongGhosts.has(ghost)) {
       ghosts.delete(ghost);
     }
   }
@@ -107,6 +105,8 @@ let possibleGhosts = computed(() => {
   return ghosts;
 });
 
-store.possibleGhosts = possibleGhosts;
+watchEffect(() => {
+  store.possibleGhosts = possibleGhosts.value;
+});
 
 </script>

@@ -1,7 +1,6 @@
 <template>
   <div class="ghostGrid" id="ghostGrid">
-
-    <ghostCard :key="ghost.name" v-for="ghost in ghosts"
+    <ghostCard :key="ghost.name" v-for="ghost in store.possibleGhosts"
                :ghost=ghost
     />
   </div>
@@ -22,10 +21,8 @@ import {computed} from "vue";
 
 const store = useGhostStore();
 
-let wrongGhosts = ref(store.wrongGhosts);
-
-let ghosts = computed(() => {
-  return store.possibleGhosts;
-});
+// let ghosts = computed(() => {
+//   return store.possibleGhosts;
+// });
 
 </script>

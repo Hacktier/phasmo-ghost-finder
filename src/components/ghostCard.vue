@@ -6,11 +6,6 @@ const store = useGhostStore();
 
 defineProps(['ghost']);
 
-// function htmlDecode(input: string) {
-//   const doc = new DOMParser().parseFromString(input, "text/html");
-//   return doc.documentElement.textContent;
-// }
-
 </script>
 <template>
   <div class="card" v-bind:id="ghost.name">
@@ -22,7 +17,7 @@ defineProps(['ghost']);
       <span class="end-0 position-absolute me-3">
             <span class="alert alert-danger me-4 p-2 alignHuntSanity" role="alert"> {{ ghost.huntSanity }} </span>
             <button @click="store.wrongGhosts.add(ghost)" class="btn btn-danger pt-2">X</button>
-        </span>
+      </span>
     </div>
     <div class="card-body p-0">
       <table class="table table-striped card-text">
