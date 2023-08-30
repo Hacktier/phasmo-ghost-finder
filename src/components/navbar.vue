@@ -20,7 +20,9 @@ const stopwatch = useStopwatch(0, autoStart);
             <a class="nav-link" href="https://phasmo.karotte.org/" target="_blank">Maps</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Cursed Possesions</a>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#possesionsModal">
+              Cursed Possesions
+            </button>
           </li>
           <li class="nav-item">
             <button type="button" data-bs-toggle="modal" data-bs-target="#timerModal">
@@ -32,6 +34,19 @@ const stopwatch = useStopwatch(0, autoStart);
     </div>
   </nav>
 
+  <div class="modal fade" id="possesionsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cursed Possesions</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <h1>Coming Soon!</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="timerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,13 +57,14 @@ const stopwatch = useStopwatch(0, autoStart);
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center">
-          <div>
-            <span>{{ stopwatch.minutes }}</span>:<span>{{ stopwatch.seconds }}</span>
-          </div>
-          <p>{{ stopwatch.isRunning ? 'Running' : 'Not running' }}</p>
-          <button class="btn btn-primary btnColor me-2" @click="stopwatch.start()">Start</button>
-          <button class="btn btn-primary btnColor me-2" @click="stopwatch.pause()">Pause</button>
-          <button class="btn btn-primary btnColor" @click="stopwatch.reset(0, false)">Reset</button>
+<!--          <div>-->
+<!--            <span>{{ stopwatch.minutes }}</span>:<span>{{ stopwatch.seconds }}</span>-->
+<!--          </div>-->
+<!--          <p>{{ stopwatch.isRunning ? 'Running' : 'Not running' }}</p>-->
+<!--          <button class="btn btn-primary btnColor me-2" @click="stopwatch.start()">Start</button>-->
+<!--          <button class="btn btn-primary btnColor me-2" @click="stopwatch.pause()">Pause</button>-->
+<!--          <button class="btn btn-primary btnColor" @click="stopwatch.reset(0, false)">Reset</button>-->
+          <h1>Coming Soon!</h1>
         </div>
       </div>
     </div>
