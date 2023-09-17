@@ -110,7 +110,7 @@ export default new Set([
         new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.ORB, Evidence.FREEZING]),
         "50%",
         ["Kann den Sicherungskasten nicht einschalten, schaltet ihn aber 2x so häufig aus wie andere Geister."],
-        ["Tempo abhängig von der Temperatur: >15°C = 1,4m/s / <0°C = 2,7m/s", "Keine Sicht Beschleunigung."],
+        ["Tempo abhängig von der Temperatur: >15°C = 1,4m/s / <0°C = 2,7m/s", "Keine Sicht Beschleunigung.", "Wenn es nur 1 oder 2 Beweise gibt => immer Freezing."],
         ["Änderung der Geschwindigkeit in verschiedenen Räumen", "Sicherungskasten aus => Geist hat weiße Atemwolken vor dem Mund"]
     ),
     new Ghost(
