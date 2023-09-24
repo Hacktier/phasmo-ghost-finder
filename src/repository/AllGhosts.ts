@@ -53,7 +53,7 @@ export default new Set([
     new Ghost(
         "Mare",
         new Set<Evidence>([Evidence.BOX, Evidence.ORB, Evidence.WRITING, Evidence.SPEED]),
-        "40% / 60% (Licht)",
+        "40% / 60% (Licht aus)",
         ["Benutzt der Spieler Elektronik innerhalb von 4m des Geistes, gibt es eine klein Chance, das sie direkt ausgeschaltet wird"],
         ["Kann keine Lichter anmachen.", "Beim Raumwechsel wird eher ein unbeleuchteter Raum gewählt.", "höhere Chance auf Lichter Zerstören Event"],
         ["häufiges wecheln in unbeleuchte Räume", "kaputte Lampen", "direktes Licht auschalten"]
@@ -79,7 +79,7 @@ export default new Set([
         new Set<Evidence>([Evidence.ULTRAVIOLET, Evidence.WRITING, Evidence.FREEZING, Evidence.SPEED]),
         "70% / 100% (Fähigkeit)",
         ["Kann unabhängig der Sanity hunten."],
-        ["Hat eine Interaktionreichweite von 5m", "Das Kru/zifix hat eine 50% größere Reichweite.", "Minimum Cooldown von 20 Sekunden zwischen Hunts"],
+        ["Hat eine Interaktionreichweite von 5m", "Das Kruzifix hat eine 50% größere Reichweite.", "Minimum Cooldown von 20 Sekunden zwischen Hunts"],
         ["Jagt nach dem Smudgen innerhalb von 60 - 90 Sekunden"]
     ),
     new Ghost(
@@ -115,7 +115,7 @@ export default new Set([
     ),
     new Ghost(
         "Goryo",
-        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.DOTS]),
+        new Set<Evidence>([Evidence.EMF, Evidence.ULTRAVIOLET, Evidence.DOTS, Evidence.SPEED]),
         "50%",
         ["Eine D.O.T.S Interaktion kann nur durch eine Videkamera gesehen werden wenn sich kein Spieler im Raum befindet.", "Wenn es nur 1 oder 2 Beweise gibt => immer D.O.T.S"],
         ["Ein Goryo kann niemals selbständig den Raum wechseln."],
