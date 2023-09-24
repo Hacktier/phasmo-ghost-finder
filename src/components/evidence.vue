@@ -81,8 +81,9 @@ let possibleGhosts = computed(() => {
     for (const evidence of Object.keys(Evidence)) {
       const state = evidencesWithStates.value[Evidence[evidence]];
 
-      if (ghost.name === "Mimik"
-          && (evidence == Evidence.SPEED || evidence == "SPEED")) {
+      if (ghost.name === "The_Mimic" && evidence === "SPEED") {
+
+        console.log(evidence)
         continue;
       }
 

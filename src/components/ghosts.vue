@@ -21,8 +21,4 @@ import {computed} from "vue";
 
 const store = useGhostStore();
 
-// let ghosts = computed(() => {
-//   return store.possibleGhosts;
-// });
-
 </script>
